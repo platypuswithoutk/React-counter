@@ -12,8 +12,10 @@ class Step extends Component {
     }
 
     updateStepValue = (event) => {
-        this.props.stepValue(event);
-        this.setState({stepValue: event.target.value})
+        if (event.target.value >= 1) {
+            this.props.stepValue(event);
+            this.setState({stepValue: event.target.value})
+        }
     }
 
     render () {
