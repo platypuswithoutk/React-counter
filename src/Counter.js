@@ -16,8 +16,10 @@ class Counter extends Component { //klasa counter DZIEDZICZY po component
         }
 
         this.state = {
-            counterValue: initValue
+            counterValue: initValue,
+            stepValue: 1
         };
+
     }
 
     addValue = () => {
@@ -42,7 +44,7 @@ class Counter extends Component { //klasa counter DZIEDZICZY po component
         return(
             <div className="counter">
                 <CounterDisplay counterCurrentValue={this.state.counterValue}/>
-                <ButtonsPanel changeValue={this.addValue} resetValue={this.reset}/>
+                <ButtonsPanel changeValue={this.addValue} resetValue={this.reset} stepValue={this.state.stepValue}/>
                 <Step stepValue={this.setStep}/>
             </div>  
         );

@@ -5,7 +5,7 @@ const ButtonsPanel = props => { //nazwa komponentu musi odpowiadac nazwie pliku
     return (
         <div className="buttons-panel"> 
             To jest panel przycisków
-            <button onClick={props.changeValue}>Zwiększ o:</button>
+            <button onClick={props.changeValue}>Zwiększ o {props.stepValue}</button>
             <button onClick={()=>props.resetValue(true)}>Wyzeruj</button>
             <button onClick={()=>props.resetValue(false)}>Reset</button>
         </div>
