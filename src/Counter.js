@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import ButtonsPanel from './ButtonsPanel';
 import CounterDisplay from './CounterDisplay';
+import Step from './Step';
 
 class Counter extends Component { //klasa counter DZIEDZICZY po component
 
@@ -19,9 +20,9 @@ class Counter extends Component { //klasa counter DZIEDZICZY po component
         };
     }
 
-    addOne = () => {
+    addValue = () => {
         this.setState(prevState=> {
-            return({counterValue: prevState.counterValue + 1})
+            return({counterValue: prevState.counterValue + parseInt(this.state.stepValue)}) 
         })
     }  
 
@@ -33,12 +34,16 @@ class Counter extends Component { //klasa counter DZIEDZICZY po component
         }
     }
 
+    setStep = (event) => {
+        this.setState({stepValue: event.target.value});
+    }
 
     render () {
         return(
             <div className="counter">
                 <CounterDisplay counterCurrentValue={this.state.counterValue}/>
-                <ButtonsPanel changeValue={this.addOne} resetValue={this.reset}/>
+                <ButtonsPanel changeValue={this.addValue} resetValue={this.reset}/>
+                <Step stepValue={this.setStep}/>
             </div>  
         );
     }

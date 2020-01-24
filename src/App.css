@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.step p {
+  padding: 10px;
+  display: inline-block;
+  font-size: 15px;
+  color: darkblue;
+}
+
+button {
+  padding: 10px;
+}
+
+button {
+  margin-left: 10px;
+}

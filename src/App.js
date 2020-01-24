@@ -3,16 +3,15 @@ import './App.css';
 
 import Heading from './Heading';
 import Counter from './Counter';
+import Step from './Step';
 
 function App() {
   return (
     <div className="App"> 
       <header className="App-header">
-        <Heading text='Licznik'/>
-        <Heading text='Podtytuł'/>
+        <Heading text='Licznik ReactJS'/>
       </header>
-      <Counter initValue={99}/> 
-      <Counter initValue={5}/>
+      <Counter initValue={0}/> 
     </div>
   ); 
 }
